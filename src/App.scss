@@ -1,0 +1,67 @@
+@import "typed";
+
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+.typing h2 {
+	display: inline;
+	color: #fff;
+	font-family: "VT323", monospace;
+	font-weight: 400;
+	font-style: normal;
+	overflow: hidden;
+	// border-right: 0.15em solid orange;
+	margin: 0 auto;
+	letter-spacing: 0.15em;
+	// animation: typingAnim 3.5s steps(30, end), caret 0.5s step-end infinite;
+}
+
+.typing h2 span {
+	@include typed(
+		"server",
+		"React",
+		"or Angular",
+		"maybe Vue",
+		"Typescript",
+		"unit tests",
+		"stuff...",
+		"more stuff...",
+		"coffee!",
+		"another coffee!!!",
+		"tutorial hell",
+		"confidence.",
+		1.5,
+		(
+			caret-width: 2px,
+			caret-space: 2px,
+			caret-color: orange,
+		)
+	);
+}
+
+/* The typing effect */
+@keyframes typingAnim {
+	from {
+		width: 0;
+	}
+
+	to {
+		width: 100%;
+	}
+}
+
+/* The typewriter cursor effect */
+@keyframes caret {
+	from,
+	to {
+		border-color: transparent;
+	}
+
+	50% {
+		border-color: orange;
+	}
+}
