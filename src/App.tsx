@@ -15,7 +15,8 @@ function App() {
         loop
         autoplay
         style={{
-          height: '450px', width: '500px'
+          width: '100%',
+          maxWidth: '500px'
         }}></Player>
       <div className='typing'>
         <h2>Loading <span></span ></h2 >
