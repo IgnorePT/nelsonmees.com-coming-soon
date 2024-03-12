@@ -1,3 +1,9 @@
+declare global {
+    interface Window {
+        hello: () => void;
+    }
+}
+
 export const welcomeLogs = () => {
     console.clear();
 
@@ -15,5 +21,28 @@ export const welcomeLogs = () => {
         "letter-spacing: 1px",
     ].join(" ;");
 
-    console.log("%cMay the force be with you, Always!", backgroundImage);
+    //console.log("%cMay the force be with you, Always!", backgroundImage);
+    console.log("%cSay hello() 😉", backgroundImage);
+}
+
+window.hello = () => {
+
+    const input = prompt("What's your name?");
+
+    const name = input ? input : "Stranger"
+
+    const stringsArr = [
+        `Hi ${name}, my name is Nelson Mees`,
+        "I am a front-end developer, that love to code",
+        "I know this is strange, and I am sorry for this",
+        "I am a little bit shy, but if you want you can reach me at:",
+        "mail@nelsonmees.com",
+        "Hope this helps! Byee"
+    ]
+    setTimeout(() => {
+        console.clear();
+    }, (0));
+    stringsArr.forEach((str, i) => setTimeout(console.log, 2000 * i, str))
+
+    return
 }
