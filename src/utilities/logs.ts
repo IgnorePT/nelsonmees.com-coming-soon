@@ -7,7 +7,7 @@ declare global {
 export const welcomeLogs = () => {
     console.clear();
 
-    let backgroundImage = [
+    const backgroundImage = [
         "background: url(https://i.pinimg.com/originals/5b/43/02/5b4302c2f6413454c782aeec866143cf.gif)",
         "background-size: cover",
         "color: black",
